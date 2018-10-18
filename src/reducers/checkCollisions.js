@@ -1,4 +1,4 @@
-import { checkCollision } from '../utils/formulas';
+import { checkCollision } from '../utils/formula';
 import { gameHeight } from '../utils/constants';
 
 const checkCollisions = (cannonBalls, flyingDiscs) => {
