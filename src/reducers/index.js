@@ -1,8 +1,7 @@
 import {
   LEADERBOARD_LOADED, LOGGED_IN,
   MOVE_OBJECTS, START_GAME
-} from '../actions';
-import { MOVE_OBJECTS, START_GAME } from '../Actions';
+} from '../Actions';
 import moveObjects from './moveObjects';
 import startGame from './startGame';
 
@@ -27,12 +26,12 @@ function reducer(state = initialState, action) {
     return {
       ...state,
       players: action.players,
-    };
+    }
   case LOGGED_IN:
     return {
       ...state,
       currentPlayer: action.player,
-    };
+    }
     case MOVE_OBJECTS:
       return moveObjects(state, action);
     case START_GAME:
