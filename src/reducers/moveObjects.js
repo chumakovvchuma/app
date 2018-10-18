@@ -8,6 +8,8 @@ function moveObjects(state, action) {
 
   let cannonBalls = moveBalls(state.gameState.cannonBalls);
 
+  
+
   const mousePosition = action.mousePosition || {
     x: 0,
     y: 0,
@@ -43,6 +45,7 @@ function moveObjects(state, action) {
   cannonBalls = cannonBalls.filter(cannonBall => (cannonBallsDestroyed.indexOf(cannonBall.id)));
   flyingObjects = flyingObjects.filter(flyingDisc => (flyingDiscsDestroyed.indexOf(flyingDisc.id)));
 
+  const kills = state.gameState.kills + flyingDiscsDestroyed.length;
   return {
     ...newState,
     gameState: {
@@ -51,6 +54,7 @@ function moveObjects(state, action) {
       cannonBalls: [...cannonBalls],
       lives,
       started,
+      kills,
     },
     angle,
   };
