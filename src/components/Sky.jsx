@@ -3,7 +3,7 @@ import { skyAndGroundWidth } from '../utils/constants';
 
 const Sky = () => {
   const skyStyle = {
-    fill: '#30abef',
+    fill: '#7B68EE',
   };
   const gameHeight = 1200;
   return (
